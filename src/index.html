@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci-Fi Chat Word Game</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include tmi.js for Twitch chat integration later -->
+    <script src="https://cdn.jsdelivr.net/npm/tmi.js@1.8.5/dist/tmi.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 class="glow-text">SYSTEM OVERRIDE INITIATED</h1>
+            <div id="level-info" class="glow-text">
+                LENGTH: <span id="word-length-display">4</span> | TIMER: <span id="timer-display">90</span>s
+            </div>
+        </header>
+
+        <main>
+            <div id="game-board-container">
+                <!-- Main puzzle area -->
+                <div id="puzzle-grid"></div>
+            </div>
+
+            <aside id="guess-bank">
+                <h2 class="glow-text">GUESS LOG</h2>
+                <div id="guess-list"></div>
+            </aside>
+
+            <aside id="leaderboard">
+                <h2 class="glow-text">TOP OPERATIVES</h2>
+                <ul id="score-list"></ul>
+            </aside>
+        </main>
+
+        <!-- Test Mode Input (Hidden by default) -->
+        <footer id="test-mode-footer" style="display: none;">
+            <input type="text" id="test-input" placeholder="Enter guess or !reset..." autocomplete="off">
+            <button id="test-submit">SUBMIT</button>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
